@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, ActivityIndicator } from 'react-native'
+import { View, Text, ScrollView, Image } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import { RootStackParamList } from '../../navigator/RootNavigator';
 import { CompositeNavigationProp, useNavigation } from '@react-navigation/native';
@@ -7,8 +7,9 @@ import { TabStackParamList } from '../../navigator/TabNavigator';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useTailwind } from 'tailwind-rn/dist';
 import useOrders from '../../../hooks/useOrders';
-import { Button, Image } from '@rneui/themed';
+import { Button } from '@rneui/themed';
 import OrderCard from '../../components/OrderCard/OrderCard';
+import Images from '../../assets/images/Images';
 
 export type OrderScreenNavigationProp = CompositeNavigationProp<
     BottomTabNavigationProp<TabStackParamList, 'Orders'>,
@@ -32,10 +33,7 @@ export default function OrdersScreen() {
 
     return (
         <ScrollView style={{ backgroundColor: '#EB6A7C' }}>
-            <Image source={{ uri: "https://links.papareact.com/m51" }}
-                containerStyle={tw('w-full h-64')}
-                PlaceholderContent={<ActivityIndicator />}
-            />
+            <Image source={Images.orderScreen} style={{ resizeMode: "cover", width: '100%', height: 200, marginTop: 45 }} />
             <View>
                 <Button
                     color='pink'

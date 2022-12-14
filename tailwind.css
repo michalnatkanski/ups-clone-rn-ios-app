@@ -52,8 +52,52 @@
   margin-top: -0.5rem
 }
 
+.mt-10 {
+  margin-top: 2.5rem
+}
+
+.mt-20 {
+  margin-top: 5rem
+}
+
+.mt-8 {
+  margin-top: 2rem
+}
+
+.-mt-8 {
+  margin-top: -2rem
+}
+
+.mt-4 {
+  margin-top: 1rem
+}
+
+.flex {
+  display: flex
+}
+
 .h-64 {
   height: 16rem
+}
+
+.h-full {
+  height: 100%
+}
+
+.h-44 {
+  height: 11rem
+}
+
+.h-24 {
+  height: 6rem
+}
+
+.h-48 {
+  height: 12rem
+}
+
+.h-32 {
+  height: 8rem
 }
 
 .w-full {
@@ -131,6 +175,14 @@
 
 .pb-0 {
   padding-bottom: 0px
+}
+
+.pt-10 {
+  padding-top: 2.5rem
+}
+
+.pt-0 {
+  padding-top: 0px
 }
 
 .text-center {

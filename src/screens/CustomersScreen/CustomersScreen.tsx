@@ -1,4 +1,4 @@
-import { ScrollView, ActivityIndicator } from 'react-native'
+import { ScrollView, Image } from 'react-native'
 import React, { useLayoutEffect, useState } from 'react'
 import { useTailwind } from 'tailwind-rn';
 import { CompositeNavigationProp, useNavigation } from '@react-navigation/native';
@@ -6,11 +6,11 @@ import { BottomTabNavigationProp } from '@react-navigation/bottom-tabs';
 import { TabStackParamList } from '../../navigator/TabNavigator';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { RootStackParamList } from '../../navigator/RootNavigator';
-import { Image } from '@rneui/themed';
 import { Input } from '@rneui/base';
 import { GET_CUSTOMERS } from '../../../graphql/queries';
 import { useQuery } from '@apollo/client';
 import CustomerCard from '../../components/CustomerCard/CustomerCard';
+import Images from '../../assets/images/Images';
 
 export type CustomerScreenNavigationProp = CompositeNavigationProp<
     BottomTabNavigationProp<TabStackParamList, 'Customers'>,
@@ -31,12 +31,7 @@ export default function CustomersScreen() {
 
     return (
         <ScrollView style={{ backgroundColor: '#59C1CC' }}>
-            <Image
-                source={{ uri: 'https://links.papareact.com/3jc' }}
-                containerStyle={tw("w-full h-64")}
-                PlaceholderContent={<ActivityIndicator />}
-            />
-
+            <Image source={Images.customerScreen} style={{ resizeMode: "contain", width: '100%', height: 250 }} />
             <Input
                 placeholder='Search by Customer'
                 value={input}
